@@ -1,0 +1,132 @@
+    1  whoami
+    2  yum install httpd
+    3  systemctl enable httpd
+    4  systemctl start httpd
+    5  cd /etc
+    6  ll
+    7  cd httpd/
+    8  cd conf
+    9  ll
+   10  vim httpd.conf 
+   11  firewall-cmd --permanent --add-port:82/udp
+   12  firewall-cmd --list-all
+   13  firewall-cmd --permanent --add-port=82/udp
+   14  firewall-cmd --permanent --add-port=82/tcp
+   15  firewall-cmd --reload
+   16  getenfore
+   17  getenforce
+   18  cd /etc/www/html
+   19  cd /var/www/html
+   20  vim index.html
+   21  firewall-cmd list-all
+   22  firewall-cmd ---list-all
+   23  firewall-cmd --list-all
+   24  systemctl is-enabled httpd
+   25  lsof -i:82
+   26  systemctl restart httpd
+   27  systemctl status httpd
+   28  cat /var/log/messages 
+   29  cat /var/log/messages |grep 82
+   30  semanage port -l
+   31  semanage port -l |grep 82
+   32  semanage port -l |grep 8
+   33  semanage port -l |grep http
+   34  man semanage port
+   35  semanage port -a -t http_port_t -p tcp 82
+   36  semanage port -a -t http_port_t -p udp 82
+   37  systemctl restart httpd
+   38  lsof -i:82
+   39  curl http://serverb.lab.example.com
+   40  curl http://serverb.lab.example.com:82
+   41  history
+   42  systemctl status httpd
+   43  cat /var/log |grep port
+   44  cat /var/log |grep http
+   45  semanage port -l|grep http
+   46  firewall-cmd --permanent --remove-port=81/udp
+   47  firewall-cmd --permanent --remove-port=81/tcp
+   48  semanage port -l|grep http
+   49  man firewall-cmd
+   50  firewall-cmd --restart
+   51  man firewall-cmd
+   52  firewall-cmd --reload
+   53  semanage port -l|grep http
+   54  man port
+   55  firewall-cmd --permanent --remove-port=81/tcp
+   56  semanage port -l|grep http
+   57  firewall-cmd --reload
+   58  man semanage port
+   59  firewall-cmd --list-all
+   60  ll
+   61  extt
+   62  exit
+   63  ls -ld /vhost
+   64  ls -ld /vhosts
+   65  pwd
+   66  mkdir /vhosts/serverb
+   67  mkdir -p /vhosts/serverb
+   68  ll
+   69  cd /
+   70  ll
+   71  cd /vhosts/serverb/
+   72  vim index.html
+   73  ll
+   74  cd /etc
+   75  ll
+   76  cd ..
+   77  cd /etc/httpd/conf
+   78  ll
+   79  vim httpd.conf 
+   80  vim /etc/httpd/conf/httpd.conf 
+   81  systemctl restart httpd
+   82  cat /vhosts/serverb/index.html 
+   83  curl http://serverb.lab.example.com
+   84  curl http://serverb.lab.example.com:82
+   85  semanage fcontext man
+   86  man semanage fcontext
+   87  # semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?"
+   88         # restorecon -R -v /web
+   89  semanage fcontext -a -t htttpd_sys_content_t "/vhosts/serverb(/.*)?"
+   90  semanage fcontext -a -t httpd_sys_content_t "/vhosts/serverb(/.*)?"
+   91  restorecon -R -v /vhosts/serverb
+   92  curl http://serverb.lab.exaple.com
+   93  curl http://serverb.lab.example.com
+   94  curl http://serverb.lab.example.com:82
+   95  git clone https://github.com/ashish0057/My_Notes
+   96  yum install git
+   97  ll
+   98  cd
+   99  pwd
+  100  git clone https://github.com/ashish0057/My_Notes
+  101  ll
+  102  history >> My_Notes/Historyo6May
+  103  cd My_Notes/
+  104  ll
+  105  git add
+  106  git add .
+  107  git status
+  108  git push -m
+  109  git push -m update
+  110  git commit -m update
+  111  git push
+  112  cd ..
+  113  rm -rf My_Notes/
+  114  ll
+  115  git clone https://github.com/ashish0057/My_Notes
+  116  ll
+  117  tree
+  118  cp /etc/passwd My_Notes/
+  119  cd My_Notes/
+  120  git status
+  121  git add .
+  122  git status
+  123  git commit -m test
+  124  git push 
+  125  cd ..
+  126  ll
+  127  history >> newnotes My_Notes
+  128  history >> My_Notes/ notes01
+  129  history >> My_Notes notes01
+  130  pwd
+  131* history 
+  132  history >> My_Notes/notes
