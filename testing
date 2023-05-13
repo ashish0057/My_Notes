@@ -1,0 +1,220 @@
+    1  less /var/log/messages 
+    2  sealert -l 629e0856-0787-4f0b-bb22-7cfded3d3729
+    3  ls -lZd /var/www/html
+    4  ls -lZd /var/www/lab
+    5  ls -lZd /lab
+    6  ll
+    7  cd /lab
+    8  ls -lZd /lab-content/lab.html 
+    9  man semanage-fcontext 
+   10  semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?"
+   11         # restorecon -R -v /web
+   12  semanage fcontext -a -t httpd_sys_content_t "/lab-content(web(/.*)?"
+   13  semanage fcontext -a -t httpd_sys_content_t "/lab-content(/.*)?"
+   14  restorecon -R -v /lab-content/
+   15  systemctl is-enabled httpd
+   16  curl http://severb/lab.html
+   17  curl http://severb/lab.html:80
+   18  curl http://severb.lab.example.com
+   19  exit
+   20  systemctl is-enabled
+   21  systemctl is-enabled htppd
+   22  systemctl is-enabled httpd
+   23  systemctl status httpd
+   24  lsof -i:80
+   25  cat /var
+   26  ll /var
+   27  ll /var/adm/
+   28  ll /var/lib/
+   29  clear
+   30  ll /var/log/messages 
+   31  cd /
+   32  ll
+   33  ll /usr/
+   34  ll /var/tmp/
+   35  ll
+   36  cat /var
+   37  ll
+   38  cd /var/
+   39  ll
+   40  man http
+   41  find /-name 'html.cong
+   42  find / -name *htm.conf*
+   43  find / -name *html.conf*
+   44  find /-name *html.conf*
+   45  find /-name *www8
+   46  find /-name *www*
+   47  find /-name *html*
+   48  locate /-name *html*
+   49  yum install httpd
+   50  systemctl is-enabled
+   51  systemctl is-enabled httpd
+   52  systemctl enabled  httpd
+   53  systemctl enabled httpd
+   54  systemctl enable httpd
+   55  systemctl start httpd
+   56  systemctl status httpd
+   57  lsof -i:80
+   58  cat /var/www/html
+   59  cd /var/www/html/
+   60  ll
+   61  vim index.html
+   62  ll -Zld index.html 
+   63  firewall-cmd --list-all
+   64  man firewall-cmd
+   65  firewall-cmd --add-service=http
+   66  firewall-cmd --restart
+   67  man firewall-cmd 
+   68  firewall-cmd --reload
+   69  firewall-cmd --list-all
+   70  firewall-cmd --add-service=http
+   71  firewall-cmd --reload
+   72  firewall-cmd --list-all
+   73  getenforce
+   74  systemctl restart httpd
+   75  firewall-cmd --list-all
+   76  man firewall-cmd
+   77  firewall-cmd --add-service=httpd
+   78  firewall-cmd --add-service=http
+   79  firewall-cmd --reload
+   80  firewall-cmd --list-all
+   81  man firewall-cmd
+   82  firewall-cmd --permanent --add-service=http
+   83  firewall-cmd --reload
+   84  firewall-cmd --list-all
+   85  man semanage
+   86  man semanage-port
+   87  #  # semanage port -l
+   88         Allow Apache to listen on tcp port 81
+   89         # semanage port -a -t http_port_t -p tcp 81
+   90         Allow sshd to listen on tcp port 8991
+   91         # semanage port -a -t ssh_port_t -p tcp 8991
+   92  semanage port -l
+   93  semanage port -a -t ssh_port_t -p tcp 80
+   94  man semanage
+   95  systemctl status httpd
+   96  vim /etc/httpd/conf/httpd.conf 
+   97  firewall-cmd --list-all
+   98  semanage port |grep http
+   99  semanage port -l|grep http
+  100  curl http://servera/lab.example.com
+  101  curl http://servera/lab.example.com:80
+  102  curl http://serverb/lab.example.com:80
+  103  curl http://serverb.lab.example.com
+  104  clear
+  105  lsblk
+  106  parted
+  107  parted /dev/vdb2
+  108  parted /dev/vdb
+  109  man mklabel
+  110  man parted
+  111  parted /dev/vdb
+  112  udevadm settle 
+  113  cat /etc/fstab 
+  114  lsblk
+  115  blkid /dev/vdb1
+  116  mkfs.ext2 vdb1
+  117  mkfs.ext2 /dev/vdb1
+  118  blkid /dev/vdb1
+  119  mkdir /driveb1
+  120  mount /dev/vdb1 /driveb1/
+  121  lsblk
+  122  blkid /dev/vdb1
+  123  vim /etc/fstab 
+  124  udevadm settle 
+  125  reboot
+  126  vim /etc/fstab 
+  127  ll /
+  128  vim /etc/fstab 
+  129  lsblk
+  130  mount /dev/vdb1 /driveb1/
+  131  vim /etc/fstab 
+  132  mount /dev/vdb1 /driveb1/
+  133  lsblk
+  134  reboot
+  135  lsblk
+  136  mkdir /driveb2
+  137  mount /dev/vdb2 /driveb2
+  138  mkfs.ext2 /dev/vdb2
+  139  mount /dev/vdb2 /driveb2
+  140  lkblk
+  141  lsblk
+  142  blkid /dev/vdb2
+  143  vim /etc/fstab 
+  144  reboot
+  145  lsblk
+  146  free -m
+  147  df -THP
+  148  man swapon
+  149  clear
+  150  lsblk
+  151  mkswap /dev/vdc2
+  152  mkswap /dev/vdc3
+  153  swapon -s
+  154  mkswap /dev/vdc3
+  155  free -m
+  156  swapon -a
+  157  mkswap /dev/vdc3
+  158  blkid /dev/vdc3
+  159  blkid /dev/vdc3/
+  160  mkfs.ext2 /dev/vdc3
+  161  parted /dev/vdc3
+  162  mkswap /dev/vdb3
+  163  blkid /dev/vdb3
+  164  vim /etc/fstab 
+  165  free -m
+  166  udevadm settle 
+  167  free -m
+  168  lsblk
+  169  vim /etc/fstab 
+  170  lsblk
+  171  reboot
+  172  lsblk
+  173  mkswap /dev/vdb4
+  174  lsblk
+  175  swapon -s
+  176  free -m
+  177  blkid /dev/bdb4
+  178  blkid /dev/vdb4
+  179  vim /etc/fstab 
+  180  reboot
+  181  lsblk
+  182  history
+  183  swapon -
+  184  swapon -s
+  185  free -m
+  186  clear
+  187  df -THP /driveb1
+  188  df -THP
+  189  lsblk
+  190  parted /dev/vdc
+  191  pvdisplay 
+  192  man pvcreate 
+  193  pvcreate /dev/vdc1 /dev/vdc2
+  194  parted /dev/vdc
+  195  udevadm settle 
+  196  pvcreate /dev/vbc1 /dev/vdc2
+  197  pvcreate /dev/vdc1
+  198  lsblk
+  199  vgcreate -s 8M vgname01 /dev/vdc1 /dev/vdc2
+  200  vgdisplay 
+  201  pvdisplay 
+  202  lvcreate -l +51 vgname01 -n lvm01
+  203  lvdisplay 
+  204  pvdisplay 
+  205  lvcreate -l +98 vgname01 -n lvm02
+  206  pvdisplay 
+  207  lsblk
+  208  cd /M
+  209  yum install git
+  210  git clone https://github.com/ashish0057/My_Notes
+  211  cd /
+  212  ll
+  213  cd ..
+  214  ll
+  215  cd ..
+  216  cd ~
+  217  ll
+  218  cd My_Notes/
+  219  git status
+  220  history>>testing
