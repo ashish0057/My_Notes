@@ -1,0 +1,312 @@
+    1  less /var/log/messages 
+    2  getenfore
+    3  getenforce
+    4  less /var/log/messages 
+    5  sealert -l 0eb97df9-d74d-4e7c-93ea-41539e9e8550
+    6  http is--enabled httpd
+    7  systemctl is-enabled httpd
+    8  systemctl status httpd
+    9  lsof -i:80
+   10  systemctl enable httpd
+   11  systemctl start httpd
+   12  systemctl enable httpd
+   13  systemctl is-enabled httpd
+   14  systemctl status httpd
+   15  ls -lZd /var/www/html/
+   16  ausearch -m AVC -ts today
+   17  man semanage-fcontext 
+   18  # semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?"
+   19         # restorecon -R -v /web
+   20  semanage fcontext -a -t httpd_sys_content_t "/custom(.*)?"
+   21  restorecon -Rv /custom/
+   22  exit 
+   23  jobs
+   24  cd /
+   25  lab start processes-kill
+   26  cd ~
+   27  lab start processes-kill
+   28  exit
+   29  cd 
+   30  cd bin
+   31  ll
+   32  pwd
+   33  cd /
+   34  pwd
+   35  cd 
+   36  pwd
+   37  cd ~
+   38  pwd
+   39  cd /home/student/
+   40  ll
+   41  cd bin/
+   42  ll
+   43  instance network &
+   44  jobs
+   45  instance interface &
+   46  instance connection &
+   47  jobs
+   48  tail -f ~/instance_outfile
+   49  jobs
+   50  instance network &
+   51  vim instance 
+   52  instance network &
+   53  exit
+   54  ll
+   55  mkdir /home/student/bin/
+   56  vim /home/student/bin/instance 
+   57  chmod +x /home/student/bin/instance 
+   58  instance network &
+   59  jobs
+   60  cd /home/student/bin/
+   61  instance network &
+   62  ll
+   63  whoami
+   64  rm -rf instance 
+   65  ll
+   66  ssh student@servea
+   67  ssh student@servera
+   68  exit
+   69  lsblk
+   70  clear
+   71  lsblk
+   72  parted /dev/vda print
+   73  parted /dev/vdb print
+   74  parted /dev/vdb 
+   75  parted /dev/vda unit s print
+   76  parted /dev/vdb unit s print
+   77  parted /dev/vdb 
+   78  parted /dev/vdb unit s print
+   79  parted /dev/vdb 
+   80  udevadm settle 
+   81  parted
+   82  parted print /dev/vdb
+   83  parted /dev/vdb print 
+   84  lsblk 
+   85  lsblk
+   86  parted
+   87  lsblk
+   88  parted /dev/vda
+   89  parted /dev/vdb
+   90  lsblk
+   91  mkpart
+   92  parted /dev/vdb
+   93  lsblk
+   94  parted
+   95  parted /dev/vdb
+   96  lsblk
+   97  parted /dev/vdb
+   98  lslk
+   99  lsblk
+  100  parted /dev/vdc
+  101  lsblk
+  102  parted
+  103  parted /dev/vdb
+  104  parted /dev/vdc
+  105  lsblk
+  106  cat /etc/fstab 
+  107  man 5 fatab
+  108  man 5 fstab
+  109  lsblk 
+  110  #mkfs.ext4 /dev/vdc1
+  111  ls -l /dev/vdc1
+  112  file /dev/vdc1
+  113  blkid /dev/vdc1
+  114  mkfs.ext4 /dev/vdc1
+  115  blkid /dev/vdc1
+  116  mkdir /mp1
+  117  mkdir /mp2
+  118  mount /dev/vdc1 /mp1/
+  119  df -THP
+  120  mount /dev/vdc2 /mp2/
+  121  cd /mp1/
+  122  pwd
+  123  ll
+  124  stouch file{1..10}.txt
+  125  mkdir dir{1..5}
+  126  ls
+  127  touch file{1..10}.txt
+  128  ls
+  129  pwd
+  130  df -THP .
+  131  cd
+  132  umount /mp1 
+  133  cd /mp1/
+  134  ls
+  135  cd
+  136  mount /dev/vdc1 /mp2 
+  137  cd /mp2/
+  138  ls
+  139  df -THP .
+  140  cd /mp1/
+  141  mkdir dir_mp1{1..5}
+  142  ls
+  143  pwd
+  144  cd
+  145  umount /mp2 
+  146  mount /dev/vdc1 /mp1 
+  147  cd /mp1/
+  148  pwd
+  149  ls
+  150  cd
+  151  df -THP /mp1
+  152  umount /mp1 
+  153  df -THP /mp1
+  154  cd /mp1/
+  155  ls
+  156  swapon -s
+  157  free -m 
+  158  mkswap /dev/vdc2 
+  159  blkid /dev/vdc2
+  160  vim /etc/fstab 
+  161  mount -a
+  162  swapon -s
+  163  swapon -a
+  164  swapon -s
+  165  free -m 
+  166  cat /etc/fstab 
+  167  lsblk
+  168   mkdir /disk/drivec
+  169   mkdir /diska
+  170  ll /
+  171  mount /dev/vdb1 /diska/
+  172  mkfs.ext2 /dev/vdb1
+  173  mount /dev/vdb1 /diska/
+  174  lsblk
+  175  cat /dev/fstab
+  176  cat /etc/fstab 
+  177   reboot
+  178  lsblk
+  179  cat /etc/fstab 
+  180  vim /etc/fstab 
+  181  mount /dev/vdb1 /drivea
+  182  ll
+  183  mount /dev/vdb1 /diska/
+  184  lsblk
+  185  cd /diska/
+  186  history
+  187  df -THP /diska/
+  188  blkid /dev/vdb1
+  189  vim /etc/fstab 
+  190  reboot
+  191  lsblk
+  192  reboot 
+  193  lsblk
+  194  mkdir /diskb
+  195  mount /dev/vdb2 /disk2
+  196  mount /dev/vdb2 /diskb/
+  197  mkfs.ext2 /dev/vdb2 /diskb/
+  198  mkfs.ext2 /dev/vdb2 
+  199  mount /dev/vdb2 /diskb/
+  200  lsblk
+  201  blkid /dev/vdb2
+  202  vim /etc/fstab 
+  203  reboot
+  204  lsblk
+  205  parted /dev/vdd
+  206  lsblk
+  207  udevadm settle 
+  208  pvdisplay 
+  209  pvcreate 
+  210  pvcreate /dev/vdd1 /dev/vdd2
+  211  pvdisplay 
+  212  pvscan
+  213  pvs
+  214  vgcreate -s 8M vgname01 /dev/vdd1 /dev/vdd2
+  215  vgdisplay 
+  216  pvdisplay 
+  217  lvcreate -L +415M vgname01 -n lvm01
+  218  lvdisplay 
+  219  vgdisplay 
+  220  lvcreate -l +415M vgname01 -n lvm01
+  221  lvcreate -l +416M vgname01 -n lvm01
+  222  lvcreate -l +51 vgname01 -n lvm02
+  223  lvdisplay 
+  224  pvdisplay 
+  225  lvdisplay 
+  226  ls-l
+  227  ls-l /dev/mapper/vgname01-lvm01
+  228  ls -l /dev/mapper/vgname01-lvm01
+  229  ls -l /dev/dm-0
+  230  lsblk
+  231  mkfs.ext4 /dev/vgname01/lvm01
+  232  blkid /dev/vgname01/lvm0
+  233  blkid /dev/vgname01/lvm01
+  234  vim /etc/fstab 
+  235  mount -a 
+  236  mkdir /mp_lvm01
+  237  df -THP
+  238  mount -a
+  239  df -THP
+  240  mount -a
+  241  dd
+  242  dd if=/dev/zero of=/mp_lvm01/file1 bs=1M count=300
+  243  ls -lrth /mp_lvm01/file1 
+  244  du -sh /mp_lvm01/file1 
+  245  df -THP
+  246  dd if=/dev/zero of=/mp_lvm01/file2 bs=1M count=200
+  247  df -THP
+  248  vgdisplay 
+  249  lvdisplay 
+  250  df -THP
+  251  lvdisplay 
+  252  lvdisplay /dev/vgname01/lvm01
+  253  lvextend -l +12 -n
+  254  lvextend -l +12 -n lvm01
+  255  lvextend -l +12 -n /dev/vgname01/lvm01
+  256  lvdisplay 
+  257  lvdisplay lvm01
+  258  lvdisplay /dev/vgname01/lvm01
+  259  df -THP
+  260  resize2fs /dev/vgname01/lvm01
+  261  df -thp
+  262  df -THP
+  263  vgdisplay 
+  264  lvdisplay /dev/vgname01/lvm01
+  265  vgdisplay 
+  266  parted 
+  267  parted /dev/vdd
+  268  lsblk
+  269  udevadm settle 
+  270  pvcreate /dev/vdd3
+  271  vgdisplay 
+  272  pvdisplay 
+  273  vgdisplay 
+  274  vgextend vgname01 /dev/vdd3
+  275  vgdisplay 
+  276  df -THP
+  277  lvextend -l +86 -n /dev/vgname01/lvm01
+  278  resize2fs /dev/vgname01/lvm01
+  279  df -THP
+  280  history
+  281  history>>noteslvm
+  282  ll
+  283  mv noteslvm noteslvm.txt
+  284  ll
+  285  lsblk
+  286  parted
+  287  udevadm 
+  288  udevadm settle 
+  289  lsblk
+  290  pvscan
+  291  vgcreate vgnameswap /dev/vdd5
+  292  vgscan
+  293  vgdisplay vgnameswap 
+  294  lvcreate -l +100%FREE -n lvmswap vgnameswap 
+  295  lvscan
+  296  lvdisplay /dev/vgnameswap/lvmswap 
+  297  mkswap /dev/vgnameswap/lvmswap 
+  298  blkid /dev/vgnameswap/lvmswap 
+  299  vim /etc/fstab 
+  300  free -m
+  301  swapon -s
+  302  mount -a
+  303  swapon -a
+  304  swapon -s
+  305  free -m
+  306  history
+  307  history>>noteslvm01
+  308  yum install git
+  309  git clone https://github.com/ashish0057/My_Notes
+  310  cd My_Notes/
+  311  ll
+  312  history>noteslvm02
