@@ -1,0 +1,47 @@
+    1  vim /usr/local/sbin/dynolabs-update.sh 
+    2  ls
+    3  exit
+    4  systemctl isolate multi-user.target 
+    5  systemctl isolate graphical.target 
+    6  pgrep -l -u student
+    7  ps -aef|head -1
+    8  ps -aef|head -1; ps -aef|grep gnome
+    9  pstree -p
+   10  pstree -p student
+   11  pstree -p user1
+   12  nice  -p -20 sha1sum /dev/zero &
+   13  nice -n -20 sha1sum /dev/zero & 
+   14  sha1sum /dev/zero & 
+   15  nice -n -15 sha1sum /dev/zero & 
+   16  renice -p 4838 -n 20 
+   17  renice -n 20 -p 4838  
+   18  renice -n 20 -p 4837
+   19  nice -n -16 sha1sum /dev/zero & 
+   20  nice -n -17 sha1sum /dev/zero & 
+   21  nice -n -18 sha1sum /dev/zero & 
+   22  renice -n -14 -p 4831
+   23  history>tunednicevalue
+   24  cat /etc/crontab 
+   25  git clone https://github.com/ashish0057/My_Notes
+   26  ps -aef | head -1 ; ps -aef | grep sha
+   27  uptime 
+   28  jobs
+   29  kill -9 4831 4837 4838 4839 4846 4847 4848 4913
+   30  jobs
+   31  uptime
+   32  cd /etc/cron.d/
+   33  ll
+   34  cd ..
+   35  cd cron.hourly/
+   36  pwd
+   37  ll
+   38  cat 0anacron 
+   39  systemctl status git
+   40  cd /
+   41  ll
+   42  yum install git
+   43  systemd-tmpfiles --clean
+   44  git clone https://github.com/ashish0057/My_Notes
+   45  ll
+   46  cd /My_Notes/
+   47  history>nicevalue
