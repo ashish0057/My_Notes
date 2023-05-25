@@ -1,0 +1,94 @@
+    1  mkdir /project
+    2  yum install nfs-service
+    3  yum install nfs-utils-coreos.x86_64 
+    4  yum install rpc-bind
+    5  dnf install autofs-1:5.1.7-27.el9.x86_64 s
+    6  dnf install autofs-1:5.1.7-27.el9.x86_64 
+    7  clear
+    8  vim /etc/exports 
+    9  exportfs -rv
+   10  systemctl start nfs-server.service 
+   11  systemctl enable nfs-server.service 
+   12  systemctl reload nfs-server.service 
+   13  firewall-cmd --permanent --add-service=nfs
+   14  firewall-cmd --reload
+   15  cd /project/
+   16  touch file{1..10}.txt
+   17  vim /etc/NetworkManager/system-connections/
+   18  nmcli connection show 
+   19  vim /etc/NetworkManager/system-connections/Wired\ connection\ 1.nmconnection 
+   20  cat /etc/hosts
+   21  exit
+   22  systemctl list-units --type service 
+   23  systemctl list-units --type socket 
+   24  systemctl enable cockpit.socket 
+   25  systemctl start cockpit.socket 
+   26  systemctl list-units --type socket 
+   27  systemctl list-units --type all 
+   28  systemctl list-units --type service --all
+   29  systemctl 
+   30  systemctl cat sshd 
+   31  systemctl status sshd 
+   32  cat /usr/lib/systemd/system/sshd.service
+   33  systemctl cat sshd 
+   34  systemctl isolate multi-user.target 
+   35  exit
+   36  echo ushdjfhjerhgjkerghkjehkjghejkgrhekjhg|passwd --stdin root
+   37  exit
+   38  vim /etc/grub2.cfg 
+   39  echo redhat|passwd --stdin root
+   40  touch /.autorelabel 
+   41  exit
+   42  nmcli connection show 
+   43  nmcli device show 
+   44  ip show
+   45  echo aiufhsjDBvjsbvjbwjvhb|echo --stdin root
+   46  systemctl reboot
+   47  echo redhat|passwd --stdin root
+   48  touch /.autorelabel
+   49  exit
+   50  vim /etc/grub2.cfg 
+   51  systemctl reboot
+   52  echo redhat|passwd --stdin root
+   53  touch /.autorelabel
+   54  exit
+   55  lsblk
+   56  yum install vdo-support.x86_64 
+   57  yum install vdo kmod-kvdo
+   58  which vdo 
+   59  yum install stratisd stratis-cli
+   60  lvcreate --type vdo --name vdo-lv01 --sizew 5G vg01
+   61  lvcreate --type vdo --name vdo-lv01 --size 5G vg01
+   62  lsnlk
+   63  lsblk
+   64  parted /dev/vdd
+   65  lsblk
+   66  udevadm settle 
+   67  clear
+   68  lkblk
+   69  lsblk
+   70  pvcreate /dev/vdd1
+   71  vgcreate vg01 /dev/vdd1
+   72  lvcreate --type vdo --name vdo-lv01 --size 3G vg01
+   73  man lvcreate
+   74  lvcreate --type vdo --name vdo-lv01 -l 100%FREE vg01
+   75  lvdisplay 
+   76  parted /dev/vdc
+   77  udevadm settle 
+   78  lsblk
+   79  pvcreate /dev/vdc1
+   80  vgextend vg01 /dev/vdc1
+   81  vgdisplay 
+   82  lvcreate --type vdo --name vdo-lv01 --size 5G vg01
+   83  lsblk
+   84  lvdisplay 
+   85  mkfs.xfs /dev/vg01/vdo-lv01 
+   86  blkid /dev/vg01/vdo-lv01 
+   87  yum install git
+   88  git clone https://github.com/ashish0057/My_Notes
+   89  cd /
+   90  ll
+   91  git clone https://github.com/ashish0057/My_Notes
+   92  ll
+   93  cd /My_Notes/
+   94  history>vdo
