@@ -1,0 +1,116 @@
+    1  vim /etc/grub2.cfg 
+    2  echo sdnfkjbjsfghhbgfhg|passwd --stdin root
+    3  exit
+    4  vim /etc/grub2.cfg 
+    5  exit
+    6  echo atenorth|passwd --stdin root
+    7  touch /.autorelabel
+    8  exit
+    9  lsblk
+   10  parted /dev/vdb
+   11  udevadm settle 
+   12  lsblk
+   13  pvcreate /dev/vdb1
+   14  vgcreate -s 8M -n redhat /dev/vdb1 
+   15  vgcreate -s 8M redhat /dev/vdb1 
+   16  vgdisplay redhat 
+   17  lvcreate -l 50 redhat fedora
+   18  lvcreate -n fedora -l 50 redhat
+   19  lsblk
+   20  mkfs.vfat /dev/redhat/fedora 
+   21  blkid /dev/redhat/fedora 
+   22  vim /etc/fstab 
+   23  mkdir /mnt/lvm
+   24  vim /etc/fstab 
+   25  df -THP
+   26  mount /mnt/lvm/
+   27  df -THP
+   28  lsblk
+   29  systemctl reboot
+   30  lsblk
+   31  df -THP
+   32  umount /mnt/lvm 
+   33  df -THP
+   34  systemctl reboot
+   35  lsblk
+   36  df -THP
+   37  free -m
+   38  clear
+   39  parted /dev/vdb
+   40  udevadm settle 
+   41  mkswap /dev/vdb2
+   42  vim /etc/fstab 
+   43  free -m
+   44  systemctl daemon-reload 
+   45  free -m
+   46  systemctl reboot
+   47  free -m
+   48  lsblk
+   49  parted /dev/vdb
+   50  udevadm settle 
+   51  mkswap /dev/vdb3
+   52  vim /etc/fstab 
+   53  free -m
+   54  systemctl reboot
+   55  free -m
+   56  lsblk
+   57  parted /dev/vdc
+   58  udevadm settle 
+   59  pvcreate /dev/vdc1
+   60  vgcreate -s 8M vg01 /dev/vdc1 
+   61  vgdisplay vg01 
+   62  lvcreate -n lvm01 -l 14 vg01
+   63  mkdir /mnt/storage
+   64  lsblk
+   65  lvdisplay lvm01
+   66  lvdisplay /dev/vg01/lvm01 
+   67  blkid /dev/vg01/lvm01 
+   68  udevadm settle 
+   69  blkid /dev/vg01/lvm01 
+   70  blkid lvm01
+   71  blkid /dev/vg01/lvm01 
+   72  clear
+   73  lsblk
+   74  df -THO
+   75  df -THP
+   76  blkid /dev/vg01/lvm01 
+   77  reboot
+   78  blkid /dev/vg01/lvm01 
+   79  blkid /vg01/lvm01 
+   80  mkfs.xfs /dev/vg01/lvm01 
+   81  blkid /vg01/lvm01 
+   82  mkfs.xfs /dev/vg01/lvm01 
+   83  blkid /vg01/lvm01 
+   84  blkid /dev/vg01/lvm01 
+   85  vim /etc/fstab 
+   86  df -THP
+   87  systemctl reboot
+   88  df -THP
+   89  parted /dev/vdc
+   90  udevadm settle 
+   91  pvcreate /dev/vdc2
+   92  vgextend vg01 /dev/vdc2
+   93  vgdisplay vg01
+   94  lvextend -l 20 vg01 lvm01
+   95  lvextend /dev/vg01/lvm01 -l 20
+   96  lvdisplay /dev/vg01/lvm01 
+   97  lvdisplay /dev/vg01/lvm01 -l 34
+   98  lvextend lvm01 -l 34
+   99  lvextend /dev/vg01/lvm01 -l 34
+  100  lvdisplay lvm01
+  101  lvdisplay /dev/vg01/lvm01
+  102  history
+  103  yum install g
+  104  yum install git
+  105  git clone https://github.com/ashish0057/My_Notes
+  106  ll /
+  107  git clone https://github.com/ashish0057/My_Notes
+  108  ll
+  109  rm -rf My_Notes/
+  110  ll
+  111  d /
+  112  cd /
+  113  git clone https://github.com/ashish0057/My_Notes
+  114  ll
+  115  history>>My_Notes/
+  116  history>>My_Notes/lvm_swap_extend
