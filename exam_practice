@@ -1,0 +1,114 @@
+    1  vim /etc/grub2.cfg 
+    2  echo awdfdsbfhjSHGCvsghef|passwd --stdin root
+    3  echo atenorth|passwd --stdin root
+    4  touch /.autorelabel
+    5  exit
+    6  nmcli device show 
+    7  nmcli connection show 
+    8  nmcli connection add con-name mynetwork ifname eth0 type ethernet ipv4.addresses 172.25.250.14/24 ipv4.gateway 172.25.250.254 ipv4.dns 172.25.250.254 ipv4.dns-search lab.example.com ipv4.method manual autoconnect yes 
+    9  nmcli connection show 
+   10  nmcli device show 
+   11  nmcli connection show mynetwork 
+   12  nmcli connection delete mynetwork 
+   13  nmcli connection show 
+   14  clear
+   15  cd /etc/yum.repos.d/
+   16  ll
+   17  rm -rf redhat.repo rhel_dvd.repo 
+   18  ll
+   19  vim base.repo
+   20  clear 
+   21  cd /
+   22  dnf install httpd
+   23  systemctl enable httpd
+   24  systemctl start httpd
+   25  systemctl status httpd
+   26  mkdir /project
+   27  vim /project/index.html
+   28  clear
+   29  vim /etc/httpd/conf/httpd.conf 
+   30  lsof -i:80
+   31  firewall-cmd --permanent --add-port=82/udp
+   32  firewall-cmd --permanent --add-port=82/tcp
+   33  firewall-cmd --permanent --add-service=http
+   34  firewall-cmd --reload 
+   35  man semanage-ports
+   36  man semanage-port
+   37  curl http://servera.lab.example.com
+   38  curl http://servera.lab.example.com:82
+   39  vim /etc/chrony.conf
+   40  systemctl enable chroyd.service
+   41  systemctl enable chronyd.service
+   42  systemctl restart chronyd.service 
+   43  timedatectl 
+   44  chronyc sources -v
+   45  vim /etc/chrony.conf
+   46  systemctl enable chronyd.servic
+   47  systemctl restart chronyd.service
+   48  timedatectl 
+   49  chronyc sources -v
+   50  dnf install tuned
+   51  systemctl is-enabled tuned.service 
+   52  systemctl enable --now tuned
+   53  tuned-adm active 
+   54  tuned-adm recommend 
+   55  tuned-adm profile 
+   56  tuned-adm profile desktop 
+   57  tuned-adm active 
+   58  tuned-adm profile virtual-guest 
+   59  tuned-adm active 
+   60  clear
+   61  lsblk
+   62  parted /dev/vdb
+   63  udevadm settle 
+   64  lsblk
+   65  pvcreate /dev/vdb1
+   66  vgcreate -s 6M redhat /dev/vdb1 
+   67  vgdisplay redhat 
+   68  lvcreate -n fedora -l 70 redhat
+   69  mkfs.vfat /dev/redhat/fedora 
+   70  blkid /dev/redhat/fedora 
+   71  mkdir /mnt/lvm
+   72  man semanage-port 
+   73  # semanage port -a -t http_port_t -p tcp 82
+   74  semanage port -a -t http_port_t -p tcp 82
+   75  semanage port -a -t http_port_t -p udp 82
+   76  man semanage-fcontext 
+   77  # semanage fcontext -a -t httpd_sys_content_t "/web(/.*)?"
+   78         # restorecon -R -v /web
+   79  semanage fcontext -a -t httpd_sys_content_t "/project(.*)?"
+   80  semanage fcontext -a -t httpd_sys_content_t "/project(/.*)?"
+   81  restorecon -Rv /project/
+   82  systemctl restart httpd
+   83  lsblk
+   84  blkid /dev/redhat/fedora 
+   85  vim /etc/fs
+   86  vim /etc/fstab 
+   87  mount /mnt/lvm/
+   88  lsblk 
+   89  df -THP
+   90  mount -
+   91  mount -A
+   92  mount -a
+   93  vim /etc/fstab 
+   94  blkid /dev/redhat/fedora 
+   95  vim /etc/fstab 
+   96  mount /mnt/lvm/
+   97  df -THP
+   98  reboot
+   99  df -THP
+  100  free -m
+  101  parted /dev/vdb
+  102  udevadm settle 
+  103  mkswap /dev/vdb2
+  104  history
+  105  ll /
+  106  yum install git
+  107  systemctl enable git
+  108  git clone https://github.com/ashish0057/My_Notes
+  109  ll /
+  110  cd /
+  111  git clone https://github.com/ashish0057/My_Notes
+  112  ll
+  113  cd My_Notes/
+  114  history>>exam_practice
