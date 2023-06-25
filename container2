@@ -1,0 +1,29 @@
+    1  mkdir ~/container_journal
+    2  podman search rsyslog|grep lendingwork
+    3  podman pull docker.io/lendingworks/rsyslog
+    4  podman images
+    5  podman run -d --name logserver -v /home/walhalla/container_journal:/var/log/journal:Z docker.io/lendingworks/rsyslog
+    6  podman ps
+    7  mkdir -p /home/walhalla/.config/systemd/user
+    8  cd /home/walhalla/.config/systemd/user/
+    9  podman generate systemd --name logserver --files --new
+   10  podman stop logserver
+   11  podman rm logserver
+   12  podman ps
+   13  loginctl user-status walhalla
+   14  loginctl show-user walhalla
+   15  loginctl enable-linger walhalla
+   16  systemctl --user daemon-reload
+   17  systemctl --user enable container-logserver.service --now
+   18  podman ps
+   19  history
+   20  yum install git
+   21  git clone https://github.com/ashish0057/My_Notes
+   22  ll
+   23  rm -rf My_Notes/
+   24  cd ~
+   25  pwd
+   26  git clone https://github.com/ashish0057/My_Notes
+   27  cd My_Notes/
+   28  history > container2
+
