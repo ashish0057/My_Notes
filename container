@@ -1,0 +1,13 @@
+    1  useradd walhalla
+    2  echo redhat|passwd --stdin walhalla 
+    3  ls -l /run/log/
+    4  vim /etc/systemd/journald.conf 
+    5  systemctl restart systemd-journald.service 
+    6  journalctl -xe
+    7  ls -l /run/log/journal/ace63d6701c2489ab9c0960c0f1afe1d/system.journal 
+    8  cp -rv /run/log/journal/ace63d6701c2489ab9c0960c0f1afe1d/system.journal /home/walhalla/container_journal/
+    9  yum install podman
+   10  yum install git
+   11  git clone https://github.com/ashish0057/My_Notes
+   12  cd My_Notes
+   13  history > container
