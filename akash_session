@@ -1,0 +1,166 @@
+    1  pwd
+    2  useradd natasha
+    3  ll /home/natasha/
+    4  ll /home/
+    5  getfacl /home/natasha/
+    6  su - natasha
+    7  setfacl -m u:natasha:r-x /home/natasha
+    8  getfacl /home/natasha/
+    9  su - natasha
+   10  setfacl -m u:natasha:r-- /home/natasha
+   11  su - natasha
+   12  setfacl -m u:natasha:--- /home/natasha
+   13  getfacl /home/natasha/
+   14  su - natasha
+   15  ll /usr/local/bin/
+   16  ll /usr/share/
+   17  vim /mysearch
+   18  ll /mysearch 
+   19  chmod 755 /mysearch 
+   20  ll
+   21  ll /mysearch 
+   22  ./myserch
+   23  ./mysearch
+   24  . /mysearch
+   25  ./mysearch
+   26  cd /
+   27  ./mysearch 
+   28  ll /usr/local/bin
+   29  vim /mysearch
+   30  ./mysearch 
+   31  ll /usr/local/bin/
+   32  cat /.mysearch
+   33  cat /mysearch
+   34  cd /usr/local/bin/
+   35  ll
+   36  rm -rf *
+   37  ll
+   38  ./mysearch 
+   39  cd /
+   40  ./mysearch 
+   41  ll /usr/local/bin/
+   42  clear
+   43  systemctl status tunded
+   44  yum install tuned
+   45  systemctl enable --now tunded
+   46  systemctl enable --now tuned
+   47  systemctl start tuned
+   48  systemctl status tuned
+   49  tuned-adm profile
+   50  tuned-adm recommend
+   51  tuned-adm profile desktop
+   52  tuned-adm profile 
+   53  tuned-adm recommend
+   54  tuned-adm profile virtual-guest
+   55  tuned-adm profile 
+   56  clear
+   57  pwd
+   58  lsblk
+   59  free -m
+   60  df -THP
+   61  nmcli connection show
+   62  nmcli
+   63  yum repo
+   64  yum repositories
+   65  cd /etc/yum.repos.d/
+   66  ll
+   67  cat CentOS-
+   68  cat CentOS-Base.repo 
+   69  clear
+   70  groupadd admin
+   71  useradd -G harry
+   72  useradd -G admin harry
+   73  usermod -G admin natasha
+   74  useradd -s /sbin/nologin
+   75  useradd -s /sbin/nologin sarah
+   76  tail -4 /etc/passwd
+   77  id natasha
+   78  mkdir -p /common/admin
+   79  chown :admin /common/admin/
+   80  ll /common/
+   81  chmod 2770 /common/admin/
+   82  ll /common/
+   83  su - harry
+   84  umash
+   85  umask
+   86  su -natasha
+   87  su - natasha
+   88  ll
+   89  cd ~
+   90  ll
+   91  vim container.txt
+   92  vim container.txt 
+   93  clear
+   94  vim container.txt 
+   95  ls -l /run/log
+   96  useradd walhalla
+   97  echo redhat|passws --stdin walhalla
+   98  echo redhat|passwd --stdin walhalla
+   99  ls -l /run/log
+  100  vim /etc/systemd/journald.conf 
+  101  systemctl restart systemd-journald.service
+  102  systemctl status systemd-journald.service
+  103  journalctl -xe
+  104  hostname
+  105  ssh walhalla@c1924-node3.supportlab.cloudera.com
+  106  vim ~/.bashrv
+  107  vim ~/.bashrc 
+  108  source ~/.bashrc 
+  109  exit
+  110  ll /usr/local/bin/
+  111  grep "enter" /usr/local/bin/ /root/search.txt
+  112  grep "enter" /usr/local/bin/ > /root/search.txt
+  113  grep "enter" /usr/local/bin/ca-bundle.legacy.d > /root/search.txt
+  114  grep "enter" /usr/share/dict/words > /root/search.txt
+  115  ll /usr/share/dict/
+  116  vim /usr/share/dict/words.txt
+  117  grep "enter" /usr/share/dict/words.txt > /root/search.txt
+  118  cat /root/search.txt 
+  119  cat -n /root/search.txt 
+  120  clear
+  121  ll ~
+  122  ll /
+  123  cat /mysearch 
+  124  cd /usr/local/bin/
+  125  ll
+  126  rm -rf *
+  127  ll
+  128  cd /
+  129  vim /mysearch 
+  130  ./mysearch 
+  131  ll /usr/local/bin/
+  132  find / -user walhalla -exec cp {} 
+  133  mkdir /root/found
+  134  find / -user walhalla -exec cp {} /root/found/
+  135  find / -user walhalla -exec cp {} /root/found/ \:
+  136  find / -user walhalla -exec cp {} /root/found/ \;
+  137  ll /root/found/
+  138  clear
+  139  exit
+  140  yum install telnet
+  141  netstat -plant
+  142  netstat -plant |awk '{print $6}' 
+  143  netstat -plant |awk '{print $6}' |sort|uniq -c
+  144  netstat -plant |awk '{print $6}' |grep "LISTEN" |wc -l
+  145  netstat -plant |grep "LISTEN" |wc -l
+  146  netstat -plant |grep "LISTEN" 
+  147  netstat -plant |awk '{print $6}' |grep "LISTEN"
+  148  netstat -plant |grep "LISTEN" |cut -d' ' -F1
+  149  netstat -plant |grep "LISTEN" |cut -d' ' -f1
+  150  netstat -plant |grep "LISTEN" |cut -d' ' -f6
+  151  netstat -plant |grep "LISTEN" |cut -d' ' -f5
+  152  netstat -plant |grep "LISTEN" |cut -d' ' -f9
+  153  netstat -plant |grep "LISTEN" |cut -d' ' -f20
+  154  netstat -plant |grep "LISTEN" |cut -d' ' -f15
+  155  netstat -plant |grep "LISTEN" |cut -d' '
+  156  netstat -plant |grep "LISTEN" |cut -d' ' -f1.2.3.4.5.6.7.8.9
+  157  netstat -plant |grep "LISTEN" |cut -d' ' -f1,2,3,4,5,6,7,8,9
+  158  clear
+  159  history
+  160  yum instll git
+  161  yum install git
+  162  git clone https://github.com/ashish0057/My_Notes
+  163  ll
+  164  cd My_Notes/
+  165  ll
+  166  history>akash_session
